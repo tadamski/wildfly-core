@@ -442,6 +442,7 @@ public enum Phase {
     public static final int POST_MODULE_JSF_MANAGED_BEANS               = 0x0300;
     public static final int POST_MODULE_INTERCEPTOR_ANNOTATIONS         = 0x0301;
     public static final int POST_MODULE_JSF_CDI_EXTENSIONS              = 0x0302;
+    public static final int POST_MODULE_CONTAINER_INTERCEPTOR_ANNOTATIONS = 0x0303;
     public static final int POST_MODULE_EJB_DEFAULT_SECURITY_DOMAIN     = 0x2E02;
     public static final int POST_MODULE_EJB_BUSINESS_VIEW_ANNOTATION    = 0x0400;
     public static final int POST_MODULE_EJB_HOME_MERGE                  = 0x0401;
