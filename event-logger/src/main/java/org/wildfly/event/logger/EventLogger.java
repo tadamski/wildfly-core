@@ -100,4 +100,18 @@ public interface EventLogger {
      * @return the event source
      */
     String getEventSource();
+
+    /**
+     * Stops this logger, draining any buffered events before returning.
+     *
+     * <p>For synchronous loggers this is a no-op.  For asynchronous loggers
+     * ({@link #createAsyncLogger}) it drains the pending queue on the calling
+     * thread so that no events are lost during an orderly shutdown.
+     *
+     * <p>After {@code close()} returns, calls to {@link #log} are silently
+     * discarded.
+     */
+    default void close() {
+        // no-op for synchronous loggers
+    }
 }
